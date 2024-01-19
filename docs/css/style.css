@@ -1,0 +1,280 @@
+/* font */
+/* main_logo */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+/* top_box_font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* philosophy font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+
+body {
+/* font-family */
+	
+	background-color: var(--body-bgc);
+	overflow-x : hidden;
+/* 	display: flex;
+	align-items : center;
+	justify-content: center;*/
+	height: 7000px; 
+}
+img {
+/* 화질개선	*/
+	image-rendering: -webkit-optimize-contrast;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+/* library */
+.bd {
+	border: 2px solid black;
+}
+.bd2 {
+	border: 2px solid red;
+}
+.bd3 {
+	border: 2px solid green;
+}
+.bd4 {
+	border: 2px solid blue;
+}
+.bd5 {
+	border: 2px solid purple;
+}
+
+.con {
+	max-width : var(--con-width);
+	margin: 0 auto;
+}
+
+/* custom */
+:root {
+	--con-width : 1200px ;
+	--body-bgc : #fff ;
+}
+
+.black_cover {
+ position: fixed;
+ z-index: 9;
+ left: 0;
+ top :0 ;
+ width: 100%;
+ height: 100vh;
+ background-color: rgba(0,0,0,.1);
+}
+
+.grid {
+	position: fixed;
+  width: 100%;
+  height: 100vh;
+	top : 0;
+	z-index:-3;
+  --color: rgba(0,0,0,0.1);
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+
+.scroll_alarm {
+	font-family: 'Roboto', sans-serif;
+	position : fixed;
+	left : 50%;
+	transform : translatex(-50%);
+	top : 100px;
+	font-size : 1.5rem;
+	text-shadow : 0px 0px 3px rgba(0,0,0,.3);
+	border-radius : 50px;
+	padding : 5px 20px;
+	background-color: rgba(0,0,0,.03);
+	backdrop-filter : blur(2px);
+	animation : scroll_effect both 3 2s;
+}
+
+@keyframes scroll_effect {
+	0% {
+	opacity : 0;
+	}
+	50% {
+		opacity : 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.top_box_logo {
+	font-family: 'Roboto', sans-serif;
+	position: fixed;
+	left : 50%;
+	transform : translatex(-50%);
+	top : 20px;
+	background-color: black;
+	border-radius : 50px;
+	font-size : 1rem;
+	color : white;
+	padding : 10px 20px;
+	font-weight : bold;
+	backdrop-filter : blur(2px);
+	transition : background-color .5s, color .5s,padding .5s;
+	z-index : 9;
+	animation: top_box_logo_effect both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 50% cover 55%;
+}
+
+@keyframes top_box_logo_effect {
+	0% {
+		background-color: black;
+		color : white;
+		box-shadow : 0px 0px 0px rgba(255,255,255,0);
+	}
+	
+	100% {
+		background-color: white;
+		color : black;
+		box-shadow : 0px 0px 15px rgba(255,255,255,.7);
+	}
+}
+
+.top_box_logo:hover {
+	background-color: rgba(0,0,0,.03);
+	color : black;
+	padding : 20px 40px;
+}
+
+
+
+
+.main_jeju_SVG {
+	position : fixed;
+	left : 50%;
+	transform : translatex(-50%) scale(1);
+	top : 100px;
+	width : 500px;
+	animation: main_jeju_SVG_effect both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 35% cover 60%;
+}
+@keyframes main_jeju_SVG_effect {
+	0% {
+		transform : translatex(-50%) scale(1);
+	}
+	
+	100% {
+		transform : translatex(-50%) scale(7);
+	}
+}
+
+.jejuboy_logo_box {
+	width : 100%;
+	height : 2200px;
+}
+
+.jejuboy_logo {
+	font-family: 'Dela Gothic One', sans-serif;
+	position : sticky;
+	top : 250px;
+	white-space : nowrap;
+	color : transparent;
+	font-size : 50rem;
+	text-shadow : 0px 0px 13px rgba(0,0,0,.2);
+	opacity : 1;
+	animation: jejuboy_logo_effect both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 5% cover 15%;
+	margin-left : 300px;
+}
+
+@keyframes jejuboy_logo_effect {
+	0% {
+	font-size : 50rem;
+	text-shadow : 0px 0px 50px rgba(0,0,0,.1);
+	opacity : 0;
+	}
+	
+	100% {
+	font-size : 13rem;
+	text-shadow : 0px 0px 0px rgba(0,0,0,1);
+	opacity : 1;
+	}
+}
+
+.where_benner {
+	position: fixed;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height: 0vh;
+	background-color: rgba(0,0,0,1);
+	animation: where_benner_effect both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 50% cover 70%;
+}
+
+@keyframes where_benner_effect {
+	0% {
+		height: 0vh;
+	}
+	
+	100% {
+   height: 100vh;
+	}
+}
+
+
+
+.philosophy_box {
+	font-family: 'Playfair Display', serif;
+	position: fixed;
+	left : 50%;
+	transform : translatex(-50%);
+	top : 350px;
+	white-space : nowrap;
+	width : 20px;
+	overflow : hidden;
+	font-size : 5rem;
+	color : white;
+	text-shadow : 0px 0px 10px rgba(255,255,255,.7);
+	animation: philosophy_box_effect both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 75% cover 100%;
+	text-align : center;
+	transition : background-color .5s , color .5s , box-shadow .5s;
+}
+.philosophy_box:after{
+	content : "";
+	position: absolute;
+	bottom : 0px;
+	left : 0;
+	background-color: #fff;
+	width : 0%;
+	height : 2px;
+	z-index : 9;
+	transition : width .5s;
+	box-shadow : 0px 0px 15px rgba(255,255,255,.7);
+}
+
+.philosophy_box:hover:after{
+	width : 100%;
+}
+
+@keyframes philosophy_box_effect {
+	0% {
+		width : 0px;
+	}
+	50% {
+   width : 700px;
+	}
+	80% {
+   width : 700px;
+	}
+	100% {
+   width : 0px;
+	}
+}
+
+.fa-hand-pointer {
+	transform : rotate(-45deg);
+	font-size : 3rem;
+}
+
