@@ -240,6 +240,7 @@ img {
 	animation-range: cover 75% cover 100%;
 	text-align : center;
 	transition : background-color .5s , color .5s , box-shadow .5s;
+	z-index:9;
 }
 .philosophy_box:after{
 	content : "";
@@ -252,6 +253,7 @@ img {
 	z-index : 9;
 	transition : width .5s;
 	box-shadow : 0px 0px 15px rgba(255,255,255,.7);
+	z-index:9;
 }
 
 .philosophy_box:hover:after{
@@ -276,5 +278,6 @@ img {
 .fa-hand-pointer {
 	transform : rotate(-45deg);
 	font-size : 3rem;
+	z-index: 9;
 }
 
